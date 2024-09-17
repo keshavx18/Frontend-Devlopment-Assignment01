@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <script>
+        function addUser() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const age = document.getElementById('age').value;
+
+            if (name && email && age) {
+                const table = document.getElementById('userTable');
+                const newRow = table.insertRow();
+                const cell1 = newRow.insertCell(0);
+                const cell2 = newRow.insertCell(1);
+                const cell3 = newRow.insertCell(2);
+
+                cell1.textContent = name;
+                cell2.textContent = email;
+                cell3.textContent = age;
+
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('age').value = '';
+
+                return false;
+            } else {
+                alert('Please fill in all fields.');
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form onsubmit="return addUser();">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" required><br><br>
+        <input type="submit" value="Register">
+    </form>
+
+    <h2>Registered Users</h2>
+    <table border="1" id="userTable">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Job Registration Form</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Student Job Registration Form</h1>
+    <h3 style="text-align: center;">Fill in your details to apply for a job</h3>
+    
+    <form action="" method="post">
+        <!-- Personal Information Section -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required placeholder="Enter First Name"><br><br>
+
+            <label for="middlename">Middle Name:</label>
+            <input type="text" id="middlename" name="middlename" placeholder="Enter Middle Name"><br><br>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required placeholder="Enter Last Name"><br><br>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+        </fieldset>
+
+        <!-- Contact Information Section -->
+        <fieldset>
+            <legend>Contact Information</legend>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter Email"><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter Phone Number"><br><br>
+
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="50" required placeholder="Enter Address"></textarea><br><br>
+        </fieldset>
+
+        <!-- Educational Information Section -->
+        <fieldset>
+            <legend>Educational Information</legend>
+            
+            <label for="qualification">Highest Qualification:</label>
+            <input type="text" id="qualification" name="qualification" required placeholder="Enter Qualification"><br><br>
+
+            <label for="university">University/College:</label>
+            <input type="text" id="university" name="university" required placeholder="Enter University/College"><br><br>
+
+            <label for="percentage">Percentage Scored:</label>
+            <input type="number" id="percentage" name="percentage" min="0" max="100" step="0.01" required placeholder="Enter Percentage"><br><br>
+
+            <label for="passingyear">Year of Passing:</label>
+            <input type="number" id="passingyear" name="passingyear" min="1900" max="2100" required placeholder="Enter Passing Year"><br><br>
+        </fieldset>
+
+        <!-- Job Preferences Section -->
+        <fieldset>
+            <legend>Job Preferences</legend>
+            
+            <label for="position">Position Applied For:</label>
+            <input type="text" id="position" name="position" required placeholder="Enter Position"><br><br>
+
+            <label for="experience">Years of Experience (if any):</label>
+            <input type="number" id="experience" name="experience" min="0" max="50" step="0.1" placeholder="Enter Years of Experience"><br><br>
+
+            <label for="skills">Skills:</label><br>
+            <textarea id="skills" name="skills" rows="4" cols="50" required placeholder="Enter Skills"></textarea><br><br>
+        </fieldset>
+
+        <!-- Upload Resume Section -->
+        <fieldset>
+            <legend>Upload Resume</legend>
+
+            <label for="resume">Upload Your Resume (PDF or DOC):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br><br>
+        </fieldset>
+
+        <!-- Submit and Reset Buttons -->
+        <input type="submit" value="Submit Application">
+        <input type="reset" value="Reset Form">
+    </form>
+</body>
+
+</html>
